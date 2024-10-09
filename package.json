@@ -1,0 +1,26 @@
+{
+  "name": "festival-de-musica",
+  "version": "1.0.0",
+  "description": "\"# FestivalMusica-web\"",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/img/scss:build/css",
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hernanaguirre1/FestivalMusica-web.git"
+  },
+  "author": "hernan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hernanaguirre1/FestivalMusica-web/issues"
+  },
+  "homepage": "https://github.com/hernanaguirre1/FestivalMusica-web#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.78.0"
+  }
+}

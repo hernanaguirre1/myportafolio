@@ -1,0 +1,53 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+    user-select: none;
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1 , h2 , h3 ,h4 {
+    font-family: v.$titulo;
+}
+body , html {
+    width: 100%;
+    height: 100%;
+}
+.body-informacion {
+    background-color: v.$rosado;
+}
+.body-proyectos {
+    .footer {
+        bottom: -20rem;
+    }
+}
+.body-contacto , .body-proyectos {
+    background-color: v.$negroClaro;
+
+    .header {
+        .navegacion {
+            a {
+                color: v.$blanco;
+                &:hover {
+                    color: v.$cafe;
+                    transform: scale(1.12);
+                }
+            }
+        }
+    }
+    .footer {
+        p , i {
+            color: v.$blanco;
+        }
+    }
+}
+.body-home {
+    background-color: v.$rosado ;
+}   
