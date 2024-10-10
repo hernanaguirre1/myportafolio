@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.header {
+    width: 100%;
+    display: none;
+    justify-content: flex-end;
+    animation: header .3s ease-in-out;
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        @include m.tablet {
+            width: 25%;
+            margin-right: 80px;
+        }
+        .boton{
+            color: v.$gris;
+            font-size: 1.5rem;
+            background: transparent;
+            border: none;
+            margin-top: 20px;
+            padding: .5rem 2.5rem;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+            text-transform: uppercase;
+            &:hover {
+                background-color: v.$rosado;
+                transform: scale(1.04);
+            }
+        }
+        .select {
+            background-color: v.$rosado;
+            transform: scale(1.04);
+        }
+    }
+}
+.active {
+    display: flex;
+}

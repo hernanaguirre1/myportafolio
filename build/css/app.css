@@ -323,683 +323,193 @@ html {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Cinzel", serif;
+  font-family: "Protest Strike", sans-serif;
 }
 
 body, html {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background-color: black;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-.body-informacion {
-  background-color: #ECE7E1;
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 
-.body-proyectos .footer {
-  bottom: -20rem;
-}
-
-.body-contacto, .body-proyectos {
-  background-color: #1A1818;
-}
-.body-contacto .header .navegacion a, .body-proyectos .header .navegacion a {
-  color: #fff;
-}
-.body-contacto .header .navegacion a:hover, .body-proyectos .header .navegacion a:hover {
-  color: rgb(104, 78, 47);
-  transform: scale(1.12);
-}
-.body-contacto .footer p, .body-contacto .footer i, .body-proyectos .footer p, .body-proyectos .footer i {
-  color: #fff;
-}
-
-.body-home {
-  background-color: #ECE7E1;
+a {
+  text-decoration: none;
 }
 
 .header {
-  display: flex;
-  justify-content: flex-start;
-  height: auto;
-  line-height: 100px;
-  align-items: center;
-  width: 95%;
-}
-.header .navegacion {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (min-width: 480px) {
-  .header .navegacion {
-    width: 250px;
-    margin-left: 6rem;
-  }
-}
-
-.navegacion a {
-  position: relative;
-  text-transform: uppercase;
-  color: #1A1818;
-  font-size: 2.8rem;
-  transition: all 0.3s;
-  position: relative;
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
-}
-.navegacion a:hover {
-  transform: scale(1.12);
-  color: rgb(104, 78, 47);
-}
-
-.footer {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  gap: 1rem;
-  bottom: -70px;
-}
-@media (min-width: 1200px) {
-  .footer {
-    bottom: 0;
-  }
-}
-.footer i {
-  font-size: 2rem;
-  color: #1A1818;
-}
-.footer p {
-  font-family: "Baskervville SC", serif;
-  color: #1A1818;
-  font-size: 2rem;
-}
-
-/* MAIN */
-.main-home {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 30px 0 10px;
-  gap: 7rem;
-  margin-top: 20px;
-}
-@media (min-width: 1200px) {
-  .main-home {
-    flex-direction: row;
-    height: 80%;
-    margin: 0 auto;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-.main-home .contenedor_texto {
-  width: 100%;
-  padding: 20px;
-  border-bottom: 2px solid #1A1818;
-}
-@media (min-width: 1200px) {
-  .main-home .contenedor_texto {
-    width: 30%;
-    border-right: 2px solid #1A1818;
-    border-bottom: none;
-    margin: 200px 0 0 0;
-  }
-}
-.main-home .botones {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 3rem;
-}
-@media (min-width: 1200px) {
-  .main-home .botones {
-    width: 55%;
-  }
-}
-
-.contenedor_texto .titulo {
-  font-size: 3vw;
-  text-align: center;
-}
-@media (min-width: 1200px) {
-  .contenedor_texto .titulo {
-    text-align: left;
-    font-size: 2rem;
-  }
-}
-.contenedor_texto p {
-  text-align: center;
-  font-family: "Baskervville SC", serif;
-  text-decoration-line: underline;
-  font-size: 3vw;
-  line-height: 50px;
-  letter-spacing: 5px;
-}
-@media (min-width: 1200px) {
-  .contenedor_texto p {
-    font-size: 1.5rem;
-  }
-}
-
-.botones .boton {
-  text-decoration: none;
-  color: #1A1818;
-  background: transparent;
-  font-family: "Cinzel", serif;
-  font-size: 10vw;
-}
-@media (min-width: 1200px) {
-  .botones .boton {
-    font-size: 8.5vw;
-  }
-}
-.botones .boton:hover {
-  font-style: italic;
-  color: #474545;
-  cursor: pointer;
-}
-
-/* MAIN */
-.main-contacto {
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  place-content: center;
-  height: 80%;
-}
-@media (min-width: 768px) {
-  .main-contacto {
-    width: 80%;
-  }
-}
-.main-contacto .contacto {
-  padding: 3rem;
-  width: 100%;
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.main-contacto .contacto::after, .main-contacto .contacto::before {
-  content: "";
-  position: absolute;
-  width: 70%;
-  pointer-events: none;
-  background: transparent;
-  height: 60%;
-  border: 10px solid #ECE7E1;
-}
-.main-contacto .contacto::after {
-  top: 0;
-  left: 0;
-  border-bottom: none;
-  border-right: none;
-}
-.main-contacto .contacto::before {
-  right: 0;
-  bottom: 0;
-  border-top: none;
-  border-left: none;
-}
-
-.contacto h2 {
-  font-size: 10vw;
-  color: #fff;
-}
-@media (min-width: 768px) {
-  .contacto h2 {
-    font-size: 6.5vw;
-  }
-}
-.contacto .texto__contacto {
-  color: #fff;
-  font-family: "Baskervville SC", serif;
-  font-size: 2rem;
-  line-height: 50px;
-}
-.contacto .texto__contacto a {
-  color: #fff;
-  padding: 10px;
-  border: 1px solid #ECE7E1;
-  text-decoration-line: none;
-  transition: all 0.5s ease-in-out;
-  width: 100%;
-}
-.contacto .texto__contacto a:hover {
-  color: rgb(104, 78, 47);
-  box-shadow: 0 60px inset #ECE7E1;
-}
-@media (min-width: 480px) {
-  .contacto .texto__contacto a {
-    width: 300px;
-  }
-}
-
-.main-informacion {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: relative;
-  padding: 2rem;
-  justify-content: center;
-  align-items: center;
-  margin: 50px auto;
-}
-.main-informacion .home {
-  color: #1A1818;
-}
-.main-informacion .informacion {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(1, 1fr);
-  width: 100%;
-  margin-top: 60px;
-  min-height: 380px;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.267);
-  background-color: #d8cec2;
-  transition: 0.3s ease-in-out;
-}
-.main-informacion .informacion:hover {
-  transform: scale(1.06);
-}
-@media (min-width: 1200px) {
-  .main-informacion .informacion {
-    grid-template-columns: 55% 45%;
-    border-radius: 0 0 56% 0;
-    width: 80%;
-  }
-}
-
-.CV {
-  margin-top: 10rem;
-  position: relative;
-  font-family: "Baskervville SC", serif;
-  padding: 2rem;
-  width: 150px;
-  text-align: center;
-  color: #1A1818;
-  text-decoration-line: none;
-  font-weight: 900;
-  font-size: 2.5rem;
-}
-.CV::after, .CV::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border: 4px solid #1A1818;
-  transition: all 0.4s ease-in-out;
-}
-.CV::after {
-  top: 0;
-  left: 0;
-  border-right: none;
-  border-bottom: none;
-}
-.CV::before {
-  bottom: 0;
-  right: 0;
-  border-left: none;
-  border-top: none;
-}
-.CV:hover::after, .CV:hover::before {
-  width: 99%;
-  height: 99%;
-}
-
-.informacion img {
-  width: 40%;
-  height: auto;
-  grid-row: 1;
-  border-radius: 50%;
-}
-@media (min-width: 1200px) {
-  .informacion img {
-    width: 100%;
-    min-height: 380px;
-    border-radius: 0 0 60% 0;
-    grid-column: 2;
-  }
-}
-.informacion .informacion-texto {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 3rem;
-  align-items: center;
-  text-align: center;
-}
-.informacion .informacion-texto h2 {
-  font-size: 7vw;
-}
-@media (min-width: 1200px) {
-  .informacion .informacion-texto h2 {
-    font-size: 4vw;
-  }
-}
-.informacion .informacion-texto p {
-  font-family: "Baskervville SC", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 5px;
-}
-
-.cursor {
   display: none;
+  justify-content: flex-end;
+  animation: header 0.3s ease-in-out;
 }
-@media (min-width: 480px) {
-  .cursor {
-    width: 45px;
-    height: 45px;
-    position: fixed;
-    background: transparent;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    pointer-events: none;
-  }
-}
-
-.home {
-  position: absolute;
-  top: -20px;
-  right: 5rem;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration-line: line-through;
-  transition: 0.2s ease-in-out;
-  font-size: 2rem;
-}
-@media (min-width: 768px) {
-  .home {
-    font-size: 1.5rem;
-    right: 1.2rem;
-    transform: rotate(90deg);
-  }
-}
-.home:hover {
-  transform: rotate(90deg) scale(1.1);
-  color: rgb(104, 78, 47);
-}
-
-.animacionHome {
-  width: 100%;
-  height: 0;
-  z-index: 999;
-  background-color: #1A1818;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: home 1.2s ease-in;
-}
-@keyframes home {
-  0% {
-    height: 100%;
-  }
-  100% {
-    height: 0;
-  }
-}
-
-.animacionContacto {
-  width: 100%;
-  height: 0;
-  z-index: 999;
-  background-color: #ECE7E1;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  animation: contacto 1.2s ease-in;
-}
-@keyframes contacto {
-  0% {
-    height: 100%;
-  }
-  100% {
-    height: 0;
-  }
-}
-
-.animacionInformacion {
-  width: 0;
-  height: 500%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  z-index: 999;
-  background-color: #1A1818;
-  animation: info 1.2s ease-in;
-}
-@keyframes info {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-.animacionProyectos {
-  width: 0;
-  min-height: 500%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #ECE7E1;
-  z-index: 999;
-  animation: proyectos 1.2s ease-in;
-}
-@keyframes proyectos {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-.main-proyectos {
-  width: 100%;
-  position: relative;
-  top: 150px;
-}
-@media (min-width: 768px) {
-  .main-proyectos {
-    top: 100px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-proyectos {
-    top: 130px;
-    height: auto;
-  }
-}
-.main-proyectos .contenedor {
-  width: 100%;
-  height: 100%;
+.header .nav {
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  align-items: center;
-}
-@media (min-width: 1200px) {
-  .main-proyectos .contenedor {
-    flex-direction: row;
-  }
-}
-.main-proyectos .conteiner {
+  justify-content: space-around;
   width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 3rem;
-  position: relative;
 }
-
-.contenedor .texto-proyectos {
-  width: 100%;
-  padding: 3rem;
-  text-align: center;
-  color: #fff;
-  font-family: "Baskervville SC", serif;
-  text-decoration-line: underline;
-  line-height: 40px;
-  font-size: 2rem;
-  border-bottom: 2px solid #ECE7E1;
-}
-@media (min-width: 768px) {
-  .contenedor .texto-proyectos {
-    font-size: 3.2rem;
-    line-height: 70px;
+@media (min-width: 769px) {
+  .header .nav {
+    width: 25%;
+    margin-right: 80px;
   }
 }
-@media (min-width: 1200px) {
-  .contenedor .texto-proyectos {
-    width: 45%;
-    font-size: 2rem;
-    border-bottom: none;
-    border-right: 2px solid #ECE7E1;
-    line-height: 60px;
-  }
-}
-.contenedor .proyectos {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  overflow: hidden;
-  overflow-y: scroll;
-  align-items: center;
-  gap: 5rem;
-  height: 270px;
-}
-@media (min-width: 768px) {
-  .contenedor .proyectos {
-    height: 400px;
-  }
-}
-@media (min-width: 1200px) {
-  .contenedor .proyectos {
-    height: 500px;
-  }
-}
-
-.proyectos::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 15px;
-  background-color: rgba(54, 52, 52, 0.863);
-}
-.proyectos .proyecto {
+.header .nav .boton {
+  color: #E0E0E0;
+  font-size: 1.5rem;
   background: transparent;
-  font-family: "Cinzel", serif;
-  color: #fff;
   border: none;
-  font-size: 12vw;
-}
-.proyectos .proyecto:hover {
-  color: rgb(104, 78, 47);
-  font-style: italic;
-}
-@media (min-width: 1200px) {
-  .proyectos .proyecto {
-    font-size: 7vw;
-  }
-}
-
-.conteiner {
-  color: #fff;
-}
-.conteiner h2 {
-  font-size: 10vw;
-  font-family: "Cinzel", serif;
-  border-bottom: 2px solid #ECE7E1;
-  padding: 3rem;
-}
-@media (min-width: 1200px) {
-  .conteiner h2 {
-    font-size: 5.5vw;
-  }
-}
-.conteiner img {
-  height: auto;
-  width: 100%;
-  box-shadow: 0 0 65px rgba(0, 0, 0, 0.884);
-}
-@media (min-width: 768px) {
-  .conteiner img {
-    width: 85%;
-  }
-}
-.conteiner p {
-  font-size: 4vw;
-  letter-spacing: 5px;
-  font-family: "Baskervville SC", serif;
-  border-top: 2px solid #ECE7E1;
-  line-height: 30px;
-  padding: 3rem 0;
-}
-@media (min-width: 480px) {
-  .conteiner p {
-    font-size: 5vw;
-    line-height: 50px;
-    letter-spacing: 7px;
-    padding: 3rem;
-  }
-}
-@media (min-width: 1200px) {
-  .conteiner p {
-    font-size: 1.8vw;
-    line-height: 65px;
-  }
-}
-.conteiner .ver-pagina {
-  text-decoration-line: none;
-  font-size: 2.5rem;
-  font-family: "Cinzel", serif;
-  color: #ECE7E1;
-  text-align: center;
+  margin-top: 20px;
+  padding: 0.5rem 2.5rem;
   border-radius: 10px;
-  border: 1px solid #ECE7E1;
-  display: grid;
-  place-content: center;
-  padding: 2rem;
+  transition: all 0.3s ease-in-out;
   text-transform: uppercase;
-  transition: 0.6s ease-in-out;
 }
-.conteiner .ver-pagina:hover {
-  color: #1A1818;
-  box-shadow: inset 8.5em 0 0 0 #ECE7E1;
+.header .nav .boton:hover {
+  background-color: #FF1493;
+  transform: scale(1.04);
+}
+.header .nav .select {
+  background-color: #FF1493;
+  transform: scale(1.04);
 }
 
-.volver {
-  position: absolute;
-  top: -20px;
-  left: 15px;
-  font-size: 2rem;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  font-family: "Cinzel", serif;
-  text-transform: uppercase;
-  text-decoration-line: line-through;
-  transition: all 0.2s ease-in-out;
+.active {
+  display: flex;
 }
-@media (min-width: 768px) {
-  .volver {
-    transform: rotate(90deg);
-    font-size: 1.5rem;
+
+.main {
+  width: 100%;
+}
+.main .contenedor {
+  width: 100%;
+  margin-top: 130px;
+}
+@media (min-width: 769px) {
+  .main .contenedor {
+    width: 70%;
+    margin: 100px auto;
   }
 }
-.volver:hover {
-  transform: rotate(90deg) scale(1.1);
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.principal h1 {
+  background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 18vw;
+  text-transform: uppercase;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+@media (min-width: 769px) {
+  .principal h1 {
+    font-size: 8vw;
+    letter-spacing: 20px;
+  }
+}
+.principal p {
+  color: #E0E0E0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+@media (min-width: 769px) {
+  .principal p {
+    font-size: 1.8rem;
+    width: 50%;
+    line-height: 50px;
+  }
+}
+.principal button {
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #007BFF;
+  padding: 1rem 3rem;
+  transition: all 1000ms;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #007BFF;
+}
+@media (min-width: 769px) {
+  .principal button {
+    font-size: 3rem;
+    padding: 2rem 5rem;
+  }
+}
+.principal button:hover {
+  color: #fff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+.principal button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #007BFF;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+.principal button:hover::before {
+  width: 250%;
+}
+
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes salida {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes header {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes entrada {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }/*# sourceMappingURL=app.css.map */

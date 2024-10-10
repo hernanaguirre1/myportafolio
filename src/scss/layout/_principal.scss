@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    h1 {
+        background: 50% 100% / 50% 50% no-repeat
+        radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 18vw;
+        @include m.tablet {
+            font-size: 8vw;
+            letter-spacing: 20px;
+        }
+        text-transform: uppercase;
+        animation: reveal 3000ms ease-in-out forwards 200ms,
+        glow 2500ms linear infinite 2000ms;
+
+    }
+    p {
+        color: v.$gris;
+        text-align: center;
+        font-size: 1.2rem;
+        @include m.tablet {
+            font-size: 1.8rem;
+            width: 50%;
+            line-height: 50px
+        }
+    }
+    button {
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: v.$azul;
+        padding: 1rem 3rem;
+        transition: all 1000ms;
+        @include m.tablet {
+            font-size: 3rem;
+            padding: 2rem 5rem;
+        }
+        position: relative;
+        overflow: hidden;
+        outline: 2px solid v.$azul;
+
+        &:hover {
+            color: v.$blanco;
+            transform: scale(1.1);
+            outline: 2px solid #70bdca;
+            box-shadow: 4px 5px 17px -4px #268391;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background-color: v.$azul;
+            transform: skewX(45deg);
+            z-index: -1;
+            transition: width 1000ms;
+        }
+        &:hover::before {
+            width: 250%;
+        }
+    }
+}
