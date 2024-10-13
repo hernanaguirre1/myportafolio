@@ -11,6 +11,7 @@
         z-index: 999;
         justify-content: space-around;
         background-color: #70809049;
+        transition: all .3s ease-in-out;
         @include m.desktop {
             background: transparent;
             position: relative;

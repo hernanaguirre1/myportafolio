@@ -452,6 +452,22 @@ a {
     transform: translateY(0);
   }
 }
+@keyframes slide-in-elliptic-bottom-fwd {
+  0% {
+    -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+    transform: translateY(600px) rotateX(30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% -1400px;
+    transform-origin: 50% -1400px;
+    opacity: 1;
+  }
+}
 .contenedor {
   width: 100%;
   height: 90%;
@@ -485,6 +501,7 @@ a {
   z-index: 999;
   justify-content: space-around;
   background-color: rgba(112, 128, 144, 0.2862745098);
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 1200px) {
   .botones {
@@ -793,4 +810,105 @@ form button:hover::after {
 form button span {
   position: relative;
   z-index: 11;
+}
+
+.proyectos-section {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.proyectos-section .proyectos {
+  width: 98%;
+  background-color: rgba(112, 128, 144, 0.1568627451);
+  bottom: 0;
+  position: fixed;
+  left: 5px;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  overflow-x: scroll;
+  align-items: end;
+  gap: 3rem;
+  padding: 2rem;
+}
+.proyectos-section .proyectos::-webkit-scrollbar {
+  width: auto;
+  height: 5px;
+  background-color: rgb(29, 29, 29);
+}
+@media (min-width: 1200px) {
+  .proyectos-section .proyectos {
+    width: 50%;
+    height: 300px;
+    flex-direction: column;
+    bottom: 30px;
+    left: auto;
+    right: 20px;
+    background: transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .proyectos-section .proyectos::-webkit-scrollbar {
+    width: 5px;
+    height: auto;
+  }
+}
+.proyectos-section .proyectos .proyecto {
+  background: transparent;
+  border: none;
+  font-size: 3vw;
+  color: #cfc5b6;
+  font-family: "Protest Strike", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 5px 7px 1px black;
+}
+.proyectos-section .proyectos .proyecto:hover {
+  font-style: italic;
+  cursor: pointer;
+}
+
+.festival {
+  width: 100%;
+  margin: 100px 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .festival {
+    width: 50%;
+  }
+}
+.festival h2 {
+  font-size: 4vw;
+  color: #708090;
+  text-shadow: 3px 6px black;
+}
+.festival img {
+  width: 100%;
+  height: auto;
+}
+.festival p {
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+  color: #E0E0E0;
+  line-height: 50px;
+  letter-spacing: 3px;
+}
+.festival .responsive {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.festival .responsive img {
+  width: 40%;
+  height: auto;
+  transform: rotate(10deg);
+}
+.festival .responsive img:last-of-type {
+  transform: rotate(-10deg);
 }/*# sourceMappingURL=app.css.map */
