@@ -373,7 +373,7 @@ a {
 .header .navegacion i {
   position: relative;
   font-size: 2.5rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Caveat", cursive;
   color: #fff;
   border-radius: 50%;
   padding: 1rem 1.1rem;
@@ -383,7 +383,7 @@ a {
   color: black;
 }
 
-.bi-instagram::after {
+.navegacion .bi-instagram::after {
   content: "Instagram";
   position: absolute;
   bottom: -12px;
@@ -392,13 +392,12 @@ a {
   overflow: hidden;
   display: none;
 }
-.bi-instagram:hover::after {
+.navegacion .bi-instagram:hover::after {
   animation: redes 0.3s ease-in-out;
   display: block;
   overflow: visible;
 }
-
-.bi-github::after {
+.navegacion .bi-github::after {
   content: "Github";
   position: absolute;
   bottom: -12px;
@@ -407,13 +406,12 @@ a {
   overflow: hidden;
   display: none;
 }
-.bi-github:hover::after {
+.navegacion .bi-github:hover::after {
   animation: redes 0.3s ease-in-out;
   display: block;
   overflow: visible;
 }
-
-.bi-linkedin::after {
+.navegacion .bi-linkedin::after {
   content: "Linkedin";
   position: absolute;
   bottom: -12px;
@@ -422,7 +420,7 @@ a {
   overflow: hidden;
   display: none;
 }
-.bi-linkedin:hover::after {
+.navegacion .bi-linkedin:hover::after {
   animation: redes 0.3s ease-in-out;
   display: block;
   overflow: visible;
@@ -481,12 +479,18 @@ a {
 .botones {
   width: 100%;
   display: flex;
-  flex-direction: column;
   gap: 3rem;
-  z-index: 5;
+  position: fixed;
+  top: 60px;
+  z-index: 999;
+  justify-content: space-around;
+  background-color: rgba(112, 128, 144, 0.2862745098);
 }
 @media (min-width: 1200px) {
   .botones {
+    background: transparent;
+    position: relative;
+    flex-direction: column;
     align-items: flex-start;
     width: 20%;
     margin-left: 30px;
@@ -495,7 +499,7 @@ a {
 .botones .boton {
   background: transparent;
   border: none;
-  font-size: 6vw;
+  font-size: 2.2rem;
   color: #E0E0E0;
   font-family: "Protest Strike", sans-serif;
   text-transform: uppercase;
@@ -505,7 +509,7 @@ a {
 }
 @media (min-width: 769px) {
   .botones .boton {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
 }
 @media (min-width: 1200px) {
@@ -575,9 +579,10 @@ a {
 }
 .informacion p {
   color: #E0E0E0;
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
+  font-family: "Caveat", cursive;
+  font-size: 1.7rem;
   line-height: 30px;
+  letter-spacing: 2px;
 }
 .informacion a {
   width: 200px;
@@ -627,7 +632,7 @@ a {
   text-shadow: 3px 5px black;
 }
 .educacion aside {
-  font-family: "Playfair Display", serif;
+  font-family: "Caveat", cursive;
   font-size: 1.6rem;
   color: #E0E0E0;
 }
@@ -636,9 +641,156 @@ a {
   width: 100%;
   margin: 0;
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 2rem;
+  margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
   .contacto-section {
     margin-top: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
+}
+.contacto-section aside {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacto-section .item2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+@media (min-width: 1200px) {
+  .contacto-section .item2 {
+    width: 35%;
+  }
+}
+.contacto-section .item2 p {
+  color: #E0E0E0;
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+  line-height: 50px;
+  text-align: center;
+}
+
+.red {
+  width: 70px;
+  height: 100px;
+  background-color: #708090;
+  overflow: hidden;
+  box-shadow: 3px 5px 1px #cfc5b6;
+  z-index: 10;
+}
+.red aside {
+  width: 100%;
+  height: 100%;
+}
+.red aside a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+.red aside i {
+  color: #fff;
+  font-size: 3rem;
+}
+.red .mods, .red .sin-mod {
+  transition: all 0.3s ease-in-out;
+}
+.red .mod-instagram {
+  background: linear-gradient(90deg, rgb(255, 32, 69) 14%, rgb(254, 4, 131) 36%, rgb(254, 7, 125) 61%, rgb(254, 58, 20) 100%);
+}
+.red .mod-github {
+  background-color: black;
+}
+.red .mod-linkedin {
+  background: linear-gradient(90deg, rgb(32, 104, 255) 34%, rgb(64, 88, 153) 75%);
+}
+
+.red:hover .sin-mod {
+  transform: translateY(-100%);
+}
+.red:hover .mods {
+  transform: translateY(-100%);
+}
+
+.contacto-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  z-index: 20;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .contacto-section form {
+    width: 50%;
+  }
+}
+.contacto-section form input, .contacto-section form textarea, .contacto-section form label {
+  width: 100%;
+}
+
+form label {
+  font-family: "Caveat", cursive;
+  font-size: 2.2rem;
+  color: #E0E0E0;
+}
+form input, form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #cfc5b6;
+  transition: all 0.3s ease-in-out;
+  color: #708090;
+  font-size: 4rem;
+  text-align: center;
+  resize: none;
+}
+form input:focus, form textarea:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+form button {
+  width: 200px;
+  z-index: 10;
+  color: #fff;
+  height: 50px;
+  font-size: 3rem;
+  font-family: "Protest Strike", sans-serif;
+  text-transform: uppercase;
+  border: 2px solid #708090;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+form button::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #708090;
+  transform: skew(45deg);
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+}
+form button:hover::after {
+  width: 200%;
+}
+form button span {
+  position: relative;
+  z-index: 11;
 }/*# sourceMappingURL=app.css.map */

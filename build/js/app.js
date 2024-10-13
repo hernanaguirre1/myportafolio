@@ -56,6 +56,12 @@ particlesJS("particles-js", {
           principal.style.display = 'none'
           contacto.style.animation = 'entrada .2s ease-in'
         contacto.style.display = 'flex'
+      } else if(boton.classList.contains('inicio')) {
+         contacto.style.display = 'none'
+          principal.style.display = 'flex'
+          principal.style.animation = 'entrada .2s ease-in'
       }
+
+
     })
   })
