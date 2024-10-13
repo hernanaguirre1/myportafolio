@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=" description" content= "Mi portafolio como desarrollador y diseñador frontend hecho con SASS" >
+    <meta name+" keywords" content="portafolio"/>
     <title>Hernán Aguirre</title>
     <!-- -----------------------------------------Fonts--------------------------------------------------------------------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,27 +19,68 @@
 </head>
 <body>
     <div id="particles-js"></div>
+    
     <header class="header">
-        <nav class="nav">
-            <button data-aos="fade-down" class="boton inicio ">Inicio</button>
-            <button data-aos="fade-down" class="boton proyectos ">Proyectos</button>
-            <button data-aos="fade-down" class="boton contacto">Contacto</button>
+        <nav class="navegacion">
+        <a href="https://www.instagram.com/elhernanok_/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/hernanaguirre1" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/hern%C3%A1n/" target="_blank"><i class="bi bi-linkedin"></i></a>
         </nav>
     </header>
-    <main class="main">
-        <section class="contenedor principal">
-           <h1 data-aos="fade-down"> Bienvenido</h1>
-           <p data-aos="fade-up">En este portafolio encontrarás una selección de mis proyectos como diseñador y desarrollador web. Cada trabajo refleja mi enfoque en la creatividad y la funcionalidad, con soluciones adaptadas a las necesidades de cada cliente.
 
-            ¡Explora y descubre cómo transformo ideas en resultados! </p>
-           <button type="button" data-aos="fade-down" class="explorar">Explorar</button>
-        </section>
-        <section class="contenedor inicio">
-            
-        </section>
-    </main>
+    <div class="contenedor">
+        <nav class="botones">
+            <button class="boton inicio">Inicio</button>
+            <button class="boton contacto">Contacto</button>
+            <button class="boton proyectos">Proyectos</button>
+        </nav>
 
-    
+        <main class="main">
+            <section class="principal" id="principal">
+                <div class="informacion" data-aos="fade-up">
+                    <h1>Hernán Aguirre</h1>
+                    <h2>Diseñador Web - Desarrollador web</h2>
+                    <p> Con casi 4 años de experiencia en el mundo del desarrollo web y diseño, me especializo en la creación de interfaces dinámicas y optimizadas para brindar una experiencia de usuario fluida y atractiva. Tengo habilidades sólidas en HTML, CSS, SASS, JavaScript, y ReactJS, junto con experiencia en diseño UX/UI. Además, domino Git, SQL, APIs y he trabajado con PHP en proyectos específicos. Mi experiencia en atención al cliente también me permite entender las necesidades de los usuarios y crear soluciones efectivas.</p>
+                    <a href="curriculum.pdf" target="_blank">Mi cv</a>
+                </div>
+                <div class="estudios" data-aos="fade-down">
+                    <div class="educacion">
+                        <h3>Ciclo básico</h3>
+                        <aside>
+                            <p>Liceo N°23</p>
+                            <p>2018-2021</p>
+                        </aside>
+                        
+                   </div>
+                   <div class="educacion">
+                    <h3>Bachillerato informático</h3>
+                    <aside>
+                        <p>Escuela superior de informática</p>
+                        <p>En curso</p>
+                    </aside>
+                   </div>
+                   <div class="educacion">
+                    <h3>Curso desarrollo web completo </h3>
+                    <aside>
+                        <p>Udemy</p>
+                        <p>En curso</p>
+                    </aside>
+                   </div>
+                   <div class="educacion">
+                    <h3>Curso diseño UX/UI</h3>
+                    <aside>
+                        <p>Udemy</p>
+                        <p>En curso</p>
+                    </aside>
+                   </div>
+                </div>
+            </section>
+
+            <section class="contacto-section" id="contacto">
+                <h2 style="font-size: 5rem;">holaaaa</h2>
+            </section>
+        </main>
+    </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="build/js/app.js"></script>

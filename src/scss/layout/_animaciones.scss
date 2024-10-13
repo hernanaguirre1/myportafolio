@@ -1,35 +1,28 @@
-@keyframes reveal {
-    80%{
-      letter-spacing: 8px;
-    }
-    100% {
-      background-size: 300% 300%;
-    }
-  }
-  @keyframes glow {
-    40% {
-      text-shadow: 0 0 8px #fff;
-    }
-  }
 
-  @keyframes salida {
-    100% {
-        transform: translateX(-100%);
-    }
-  }
-  @keyframes header {
+@keyframes redes {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-12px);
     }
     100% {
         transform: translateY(0);
+        
     }
-  }
-  @keyframes entrada {
+}
+@keyframes moveBackground {
     0% {
-        transform: translateX(-100%);
+      background-position: 0 0;
     }
     100% {
-        transform: translateX(0);
+      background-position: 100% 100%;
     }
   }
+@keyframes entrada {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

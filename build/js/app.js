@@ -1,31 +1,4 @@
-const header = document.querySelector('header')
-const explorar = document.querySelector('.explorar')
-const principal= document.querySelector('.principal')
-const inicio = document.querySelector('.inicio')
-const botones = document.querySelectorAll('.boton')
-
-botones[0].classList.add('select')
-  
-  explorar.addEventListener('click' , ()=> {
-    header.classList.add('active')
-    principal.style.animation = 'salida .3s ease-in'
-    setTimeout ( ()=> {
-        principal.style.display = 'none'
-    }, 300)
-  })
-  
-  botones.forEach( boton => {
-        boton.addEventListener('click' , ()=> {
-            if (boton.classList.contains('inicio')) {
-                
-            }
-        })
-  })
-  
-  
-  
-  
-  particlesJS("particles-js", {
+particlesJS("particles-js", {
     "particles": {
       "number": {
         "value": 80,
@@ -35,13 +8,13 @@ botones[0].classList.add('select')
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#cfc5b6"
       },
       "shape": {
         "type": "circle"
       },
       "opacity": {
-        "value": 0.1,
+        "value": .1,
         "random": true
       },
       "size": {
@@ -65,3 +38,24 @@ botones[0].classList.add('select')
       }
     }
   });
+
+  // main 
+
+  const botones = document.querySelectorAll('.boton')
+  const principal = document.querySelector('#principal')
+  const contacto = document.querySelector('#contacto')
+
+  botones[0].classList.add('active')
+
+  botones.forEach(boton => {
+    boton.addEventListener('click', ()=> {
+      botones.forEach(btn => btn.classList.remove('active'));
+      boton.classList.add('active')
+
+      if(boton.classList.contains('contacto')) {
+          principal.style.display = 'none'
+          contacto.style.animation = 'entrada .2s ease-in'
+        contacto.style.display = 'flex'
+      }
+    })
+  })

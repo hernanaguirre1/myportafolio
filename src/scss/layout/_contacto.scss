@@ -1,0 +1,11 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto-section {
+    width: 100%;
+    margin: 0;
+    display: none;
+    @include m.desktop {
+        margin-top: 200px;
+    }
+}

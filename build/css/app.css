@@ -331,8 +331,13 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background-color: black;
+}
+
+body {
+  background-color: #0e0d0d;
+  background-image: radial-gradient(circle, rgba(173, 173, 173, 0.11) 2px, transparent 1px);
+  background-size: 4px 2px;
+  animation: moveBackground 10s linear infinite;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -349,167 +354,291 @@ a {
 }
 
 .header {
-  width: 100%;
-  display: none;
+  display: flex;
   justify-content: flex-end;
-  animation: header 0.3s ease-in-out;
+  align-items: center;
+  height: 80px;
 }
-.header .nav {
+.header .navegacion {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
-}
-@media (min-width: 769px) {
-  .header .nav {
-    width: 25%;
-    margin-right: 80px;
-  }
-}
-.header .nav .boton {
-  color: #E0E0E0;
-  font-size: 1.5rem;
-  background: transparent;
-  border: none;
-  margin-top: 20px;
-  padding: 0.5rem 2.5rem;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-}
-.header .nav .boton:hover {
-  background-color: #FF1493;
-  transform: scale(1.04);
-}
-.header .nav .select {
-  background-color: #FF1493;
-  transform: scale(1.04);
-}
-
-.active {
-  display: flex;
-}
-
-.main {
-  width: 100%;
-}
-.main .contenedor {
-  width: 100%;
-  margin-top: 130px;
-}
-@media (min-width: 769px) {
-  .main .contenedor {
-    width: 70%;
-    margin: 100px auto;
-  }
-}
-
-.principal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 4rem;
-}
-.principal h1 {
-  background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 18vw;
-  text-transform: uppercase;
-  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
 }
 @media (min-width: 769px) {
-  .principal h1 {
-    font-size: 8vw;
-    letter-spacing: 20px;
+  .header .navegacion {
+    width: 400px;
   }
 }
-.principal p {
-  color: #E0E0E0;
-  text-align: center;
-  font-size: 1.2rem;
-}
-@media (min-width: 769px) {
-  .principal p {
-    font-size: 1.8rem;
-    width: 50%;
-    line-height: 50px;
-  }
-}
-.principal button {
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: #007BFF;
-  padding: 1rem 3rem;
-  transition: all 1000ms;
+.header .navegacion i {
   position: relative;
-  overflow: hidden;
-  outline: 2px solid #007BFF;
-}
-@media (min-width: 769px) {
-  .principal button {
-    font-size: 3rem;
-    padding: 2rem 5rem;
-  }
-}
-.principal button:hover {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
   color: #fff;
-  transform: scale(1.1);
-  outline: 2px solid #70bdca;
-  box-shadow: 4px 5px 17px -4px #268391;
+  border-radius: 50%;
+  padding: 1rem 1.1rem;
+  transition: all 0.2s ease-in-out;
 }
-.principal button::before {
-  content: "";
-  position: absolute;
-  left: -50px;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background-color: #007BFF;
-  transform: skewX(45deg);
-  z-index: -1;
-  transition: width 1000ms;
-}
-.principal button:hover::before {
-  width: 250%;
+.header .navegacion i:hover {
+  color: black;
 }
 
-@keyframes reveal {
-  80% {
-    letter-spacing: 8px;
-  }
-  100% {
-    background-size: 300% 300%;
-  }
+.bi-instagram::after {
+  content: "Instagram";
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  font-size: 1.8rem;
+  overflow: hidden;
+  display: none;
 }
-@keyframes glow {
-  40% {
-    text-shadow: 0 0 8px #fff;
-  }
+.bi-instagram:hover::after {
+  animation: redes 0.3s ease-in-out;
+  display: block;
+  overflow: visible;
 }
-@keyframes salida {
-  100% {
-    transform: translateX(-100%);
-  }
+
+.bi-github::after {
+  content: "Github";
+  position: absolute;
+  bottom: -12px;
+  left: -3px;
+  font-size: 1.8rem;
+  overflow: hidden;
+  display: none;
 }
-@keyframes header {
+.bi-github:hover::after {
+  animation: redes 0.3s ease-in-out;
+  display: block;
+  overflow: visible;
+}
+
+.bi-linkedin::after {
+  content: "Linkedin";
+  position: absolute;
+  bottom: -12px;
+  left: -8px;
+  font-size: 1.8rem;
+  overflow: hidden;
+  display: none;
+}
+.bi-linkedin:hover::after {
+  animation: redes 0.3s ease-in-out;
+  display: block;
+  overflow: visible;
+}
+
+@keyframes redes {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-12px);
   }
   100% {
     transform: translateY(0);
   }
 }
-@keyframes entrada {
+@keyframes moveBackground {
   0% {
-    transform: translateX(-100%);
+    background-position: 0 0;
   }
   100% {
-    transform: translateX(0);
+    background-position: 100% 100%;
+  }
+}
+@keyframes entrada {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contenedor {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .contenedor {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.main {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .main {
+    width: 80%;
+  }
+}
+
+.botones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  z-index: 5;
+}
+@media (min-width: 1200px) {
+  .botones {
+    align-items: flex-start;
+    width: 20%;
+    margin-left: 30px;
+  }
+}
+.botones .boton {
+  background: transparent;
+  border: none;
+  font-size: 6vw;
+  color: #E0E0E0;
+  font-family: "Protest Strike", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.938);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 769px) {
+  .botones .boton {
+    font-size: 4.5vw;
+  }
+}
+@media (min-width: 1200px) {
+  .botones .boton {
+    font-size: 1.2rem;
+  }
+}
+.botones .boton:hover {
+  transform: translateY(-2px);
+}
+.botones .active {
+  color: #708090;
+}
+
+.principal {
+  width: 100%;
+  margin: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .principal {
+    margin-top: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .principal {
+    flex-direction: row;
+  }
+}
+.principal .informacion {
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 5px solid #cfc5b6;
+}
+@media (min-width: 1200px) {
+  .principal .informacion {
+    width: 40%;
+    border-bottom: none;
+    text-align: left;
+    border-right: 5px solid #cfc5b6;
+  }
+}
+
+.informacion h1 {
+  font-size: 12vw;
+  color: #cfc5b6;
+  text-shadow: 8px 14px 1px #000;
+}
+@media (min-width: 769px) {
+  .informacion h1 {
+    font-size: 6vw;
+  }
+}
+@media (min-width: 1200px) {
+  .informacion h1 {
+    font-size: 4vw;
+  }
+}
+.informacion h2 {
+  color: #708090;
+  text-decoration-line: underline;
+}
+.informacion p {
+  color: #E0E0E0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+.informacion a {
+  width: 200px;
+  height: 60px;
+  font-size: 2rem;
+  font-family: "Protest Strike", sans-serif;
+  color: #000;
+  padding: 0.8rem 3.5rem;
+  text-transform: uppercase;
+  background-color: #cfc5b6;
+  transition: 0.2s ease-in-out;
+  box-shadow: 3px 4px 0 #708090;
+  z-index: 10;
+}
+.informacion a:hover {
+  background-color: #e3ddd5;
+  font-size: 2.04rem;
+  box-shadow: 5px 8px 0 #708090;
+}
+
+.estudios {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .estudios {
+    width: 58%;
+  }
+}
+.estudios .educacion {
+  width: 100%;
+  z-index: 999;
+  background-color: #708090;
+  text-align: center;
+  box-shadow: 10px 7px #cfc5b6;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .estudios .educacion {
+    width: 90%;
+  }
+}
+
+.educacion h3 {
+  font-size: 2.5rem;
+  color: #cfc5b6;
+  font-family: "Protest Strike", sans-serif;
+  text-shadow: 3px 5px black;
+}
+.educacion aside {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #E0E0E0;
+}
+
+.contacto-section {
+  width: 100%;
+  margin: 0;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .contacto-section {
+    margin-top: 200px;
   }
 }/*# sourceMappingURL=app.css.map */

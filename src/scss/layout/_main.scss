@@ -1,12 +1,8 @@
 @use 'base/mixins' as m;
+
 .main {
     width: 100%;
-    .contenedor {
-        width: 100%;
-        margin-top: 130px;
-        @include m.tablet {
-            width: 70%;
-            margin: 100px auto;
-        }
+    @include m.desktop {
+        width: 80%;
     }
 }

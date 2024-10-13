@@ -1,77 +1,106 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-
 .principal {
+    width: 100%;
+    margin: 0;
+    z-index: 5;
+    @include m.desktop {
+        margin-top: 200px;
+    }
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 4rem;
-    h1 {
-        background: 50% 100% / 50% 50% no-repeat
-        radial-gradient(ellipse at bottom, #fff, transparent, transparent);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        font-size: 18vw;
-        @include m.tablet {
-            font-size: 8vw;
-            letter-spacing: 20px;
+    flex-direction: column;
+    @include m.desktop {
+        flex-direction: row;
+    }
+    .informacion {
+        padding: 2rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 5px solid v.$beige;
+        @include m.desktop {
+            width: 40%;
+            border-bottom: none;
+            text-align: left;
+            border-right: 5px solid v.$beige;
         }
-        text-transform: uppercase;
-        animation: reveal 3000ms ease-in-out forwards 200ms,
-        glow 2500ms linear infinite 2000ms;
+    }
+}
 
+.informacion {
+    h1 {
+        font-size: 12vw;
+        color: v.$beige;
+        text-shadow: 8px 14px 1px v.$negro;
+        @include m.tablet {
+            font-size: 6vw;
+        }
+        @include m.desktop {
+            font-size: 4vw;
+        }
+    }
+    h2 {
+        color: v.$azul;
+        text-decoration-line: underline;
     }
     p {
         color: v.$gris;
-        text-align: center;
-        font-size: 1.2rem;
-        @include m.tablet {
-            font-size: 1.8rem;
-            width: 50%;
-            line-height: 50px
+        font-family: v.$texto;
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    a {
+        width: 200px;
+        height: 60px;
+        font-size: 2rem;
+        font-family: v.$titulo;
+        color: v.$negro;
+        padding: .8rem 3.5rem;
+        text-transform: uppercase;
+        background-color: v.$beige;
+        transition: .2s ease-in-out;
+        box-shadow: 3px 4px 0 v.$azul;
+        z-index: 10;
+        &:hover {
+            background-color: lighten(v.$beige, 10%);
+            font-size: 2.04rem;
+            box-shadow: 5px 8px 0 v.$azul;
         }
     }
-    button {
-        border: none;
-        border-radius: 5px;
-        font-weight: bold;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        cursor: pointer;
-        color: v.$azul;
-        padding: 1rem 3rem;
-        transition: all 1000ms;
-        @include m.tablet {
-            font-size: 3rem;
-            padding: 2rem 5rem;
-        }
-        position: relative;
-        overflow: hidden;
-        outline: 2px solid v.$azul;
+}
 
-        &:hover {
-            color: v.$blanco;
-            transform: scale(1.1);
-            outline: 2px solid #70bdca;
-            box-shadow: 4px 5px 17px -4px #268391;
+.estudios {
+    width: 100%;
+    @include m.desktop {
+        width: 58%;
+    }
+
+    .educacion {
+        width: 100%;
+        z-index: 999;
+        background-color: v.$azul;
+        text-align: center;
+        box-shadow: 10px 7px v.$beige;
+        transition: all .2s ease-in-out;
+        @include m.desktop {
+            width: 90%;
         }
-        &::before {
-            content: "";
-            position: absolute;
-            left: -50px;
-            top: 0;
-            width: 0;
-            height: 100%;
-            background-color: v.$azul;
-            transform: skewX(45deg);
-            z-index: -1;
-            transition: width 1000ms;
-        }
-        &:hover::before {
-            width: 250%;
-        }
+    }
+}
+
+.educacion {
+    h3 {
+        font-size: 2.5rem;
+        color: v.$beige;
+        font-family: v.$titulo;
+        text-shadow: 3px 5px black;
+    }
+
+    aside {
+        font-family: v.$texto;
+        font-size: 1.6rem;
+        color: v.$gris;
     }
 }
