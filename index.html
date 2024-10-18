@@ -9,7 +9,7 @@
     <!-- -----------------------------------------Fonts--------------------------------------------------------------------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Protest+Strike&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- ---------------------------------------------Styles---------------------------------------------------------------------- -->    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="src/img/hernan.png" type="image/x-icon">
@@ -18,138 +18,101 @@
 
 </head>
 <body>
-    <div id="particles-js"></div>
     
     <header class="header">
-        <nav class="navegacion">
-        <a href="https://www.instagram.com/elhernanok_/" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/hernanaguirre1" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/hern%C3%A1n/" target="_blank"><i class="bi bi-linkedin"></i></a>
-        </nav>
+      <h1>Hernán Aguirre</h1>
+      <p>Diseñador y desarrollador web</p>
     </header>
+    <nav class="nav">
+        <a href="#principal" class="active"></a>
+        <div></div>
+        <div></div>
+        <div></div>
+        <a href="#promocion"></a>
+        <div></div>
+        <div></div>
+        <div></div>
+        <a href="#proyectos"></a>
+        <div></div>
+        <div></div>
+        <div></div>
+        <a href="#contacto"></a>
+    </nav>
+    <section id="principal" class="principal section">
 
-    <div class="contenedor">
-        <nav class="botones">
-            <button class="boton inicio">Inicio</button>
-            <button class="boton contacto">Contacto</button>
-            <button class="boton proyectos">Proyectos</button>
-        </nav>
+        <div class="info" data-aos="fade-up">
+            <p>Soy diseñador y desarrollador web especializado en la creación de páginas web responsivas con una interfaz agradable, enfocándome en brindar una experiencia de usuario (UX) y diseño de interfaz (UI) de alta calidad. Poseo sólidas habilidades en HTML, CSS y JavaScript, y tengo experiencia trabajando con tecnologías como React, Bootstrap, PHP y SQL, entre otras. Me apasiona la programación y el diseño, siempre buscando mejorar y adaptarme a las últimas tendencias tecnológicas.</p>
+            <a href="info.html" class="principal__boton"><span>Más info</span></a>
+        </div>
+        <div class="otros" data-aos="fade-left">
+            <h2>te invito a conocer más sobre mi experiencia y estudios</h2>
+            <a href="curriculum.pdf" target="_blank" class="principal__boton"><span>mi cv</span></a>
+        </div>
+    </section>
 
-        <main class="main">
-            <section class="principal" id="principal">
-                <div class="informacion" data-aos="fade-up">
-                    <h1>Hernán Aguirre</h1>
-                    <h2>Diseñador Web - Desarrollador web</h2>
-                    <p> Con casi 4 años de experiencia en el mundo del desarrollo web y diseño, me especializo en la creación de interfaces dinámicas y optimizadas para brindar una experiencia de usuario fluida y atractiva. Tengo habilidades sólidas en HTML, CSS, SASS, JavaScript, y ReactJS, junto con experiencia en diseño UX/UI. Además, domino Git, SQL, APIs y he trabajado con PHP en proyectos específicos. Mi experiencia en atención al cliente también me permite entender las necesidades de los usuarios y crear soluciones efectivas.</p>
-                    <a href="curriculum.pdf" target="_blank">Mi cv</a>
-                </div>
-                <div class="estudios" data-aos="fade-down">
-                    <div class="educacion">
-                        <h3>Ciclo básico</h3>
-                        <aside>
-                            <p>Liceo N°23</p>
-                            <p>2018-2021</p>
-                        </aside>
-                        
-                   </div>
-                   <div class="educacion">
-                    <h3>Bachillerato informático</h3>
-                    <aside>
-                        <p>Escuela superior de informática</p>
-                        <p>En curso</p>
-                    </aside>
-                   </div>
-                   <div class="educacion">
-                    <h3>Curso desarrollo web completo </h3>
-                    <aside>
-                        <p>Udemy</p>
-                        <p>En curso</p>
-                    </aside>
-                   </div>
-                   <div class="educacion">
-                    <h3>Curso diseño UX/UI</h3>
-                    <aside>
-                        <p>Udemy</p>
-                        <p>En curso</p>
-                    </aside>
-                   </div>
-                </div>
-            </section>
-
-            <section class="contacto-section" id="contacto">
-                <form action="https://formspree.io/f/mvgpekza" method="POST">
+    <section id="promocion" class="promocion section">
+        <h2 data-aos="fade-up-left">¿Tenés un negocio y/o emprendimiento?</h2>
+        <p data-aos="fade-down-right">Si buscas alguien para crear tu sitio web para tu negocio/emprendimiento , y mejorar tus visitas o ampliar ese negocio no dudes en contactarme para saber más acerca de como trabajo, los tiempos , etc.</p>
+        <a href="#contacto" class="promocion__boton" data-aos="fade-down">Contactame</a>
+    </section>
+    <section id="proyectos" class="proyectos section">
+        <aside class="izquierda">
+            <h2 data-aos="fade-up-right">Proyectos destacados</h2>
+            <a href="https://github.com/hernanaguirre1" target="_blank" class="proyectos__boton" data-aos="fade-down-right"><span>Ver en github</span> <i class="bi bi-arrow-right-circle"></i></a>
+        </aside>
+        <aside class="derecha">
+            <div class="proyecto">
+                <img src="src/img/proyecto-festival.png" alt="">
+                <h2>festival de musica</h2>
+                <p>Un proyecto realizado para un festival de música ficticio en montevideo, el sitio es totalmente responsivo y con un diseño agradable</p>
+                <a href="https://festivaldemontevideomusic.netlify.app" target="_blank" class="enlace">ir al sitio</a>
+            </div>
+            <div class="proyecto">
+                <img src="src/img/BlogDeCafé - Google Chrome 18_10_2024 14_02_09.png" alt="">
+                <h2>blog de café</h2>
+                <p>Un proyecto de un blog de café con articulos recetas y demas, el sitio es totalmente responsivo </p>
+                <a href="https://cafeblog-2024.netlify.app" target="_blank" class="enlace">ir al sitio</a>
+            </div>
+        </aside>
+    </section>
+    <section id="contacto" class="contacto section">
+        <aside class="formulario">
+            <form action="https://formspree.io/f/mvgpekza" method="POST">
+                <label>
+                    Nombre:
+                    <input type="text" name="name" required>
+                </label>
                     <label>
-                        Nombre:
-                        <input type="text" name="name" required>
+                        Tu email:
+                        <input type="email" name="email" required>
                     </label>
-                        <label>
-                            Tu email:
-                            <input type="email" name="email" required>
-                        </label>
-                        <label>
-                            Mensaje:
-                            <textarea name="message" required></textarea>
-                        </label>
-                        <button type="submit"><span>Enviar</span></button>
-                        </form>
-                        <div class="item2">
-                            <p>Si tienes algún proyecto en mente o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Estoy siempre abierto a nuevas oportunidades y colaboraciones. Puedes enviarme un mensaje a través del formulario o contactarme directamente por correo electrónico o redes sociales</p>
-                                <aside class="redes">
-                                    <div class="red instagram">
-                                        <aside class="sin-mod">
-                                            <a href="https://www.instagram.com/elhernanok_/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                        </aside>
-                                        <aside class="mod-instagram mods">
-                                            <a href="https://www.instagram.com/elhernanok_/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                        </aside>
-                                    </div>
-                                    <div class="red github">
-                                        <aside class="sin-mod">
-                                            <a href="https://github.com/hernanaguirre1" target="_blank"><i class="bi bi-github"></i></a>
-                                        </aside>
-                                        <aside class="mod-github mods">
-                                            <a href="https://github.com/hernanaguirre1" target="_blank"><i class="bi bi-github"></i></a>
-                                        </aside>
-                                    </div>
-                                    <div class="red linkedin">
-                                        <aside class="sin-mod">
-                                            <a href="https://www.linkedin.com/in/hern%C3%A1n/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                        </aside>
-                                        <aside class="mod-linkedin mods">
-                                            <a href="https://www.linkedin.com/in/hern%C3%A1n/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                        </aside>
-                                    </div>
-                                </aside>
-                        </div>
-            </section>
-            <section class="proyectos-section" id="proyectos">
-                <div class="festival">
-                    <h2>Festival de música</h2>
-                    <img src="src/img/proyecto-festival.png" alt="">
-                    <p>Un proyecto realizado para un Festival de musica ficticio en Montevideo,Uruguay con un diseño agradable , sencillo y de fácil uso</p>
-                    <div class="responsive">
-                        <img src="src/img/Hernán-Aguirre - Google Chrome 7_10_2024 16_01_47.png" alt="">
-                        <img src="src/img/Hernán-Aguirre - Google Chrome 7_10_2024 16_01_57.png" alt="">
-                    </div>
-                    <p>El diseño totalmente responsivo permite a los usuarios navegar desde cualquier dispositivo sin nungun inconveniente garantizando la satisfacción de los mismos</p>
-                </div>
-
-                <div class="proyectos">
-                    <button type="button" class="proyecto festival-proyecto">Festival de música</button>
-                    <button type="button" class="proyecto">Proximamente</button>
-                    <button type="button" class="proyecto">Proximamente</button>
-                    <button type="button" class="proyecto">Proximamente</button>
-                    <button type="button" class="proyecto">Proximamente</button>
-                </div>
-            </section>
-        </main>
-    </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+                    <label>
+                        Mensaje:
+                        <textarea name="message" required></textarea>
+                    </label>
+                    <button data-aos="fade-down-right" type="submit">Enviar</button>
+                    </form>
+                    <footer class="footer">
+                        <aside  class="redes">
+                            <a href="https://www.instagram.com/elhernanok_/" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="https://github.com/hernanaguirre1" target="_blank"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/hern%C3%A1n/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61567027719229" target="_blank"><i class="bi bi-facebook"></i></a>
+                        </aside>
+                    </footer>
+        </aside>
+        <aside data-aos="fade-up-left" class="mail">
+            <p>Si buscas a alguien para diseñar y  desarrollar tu sitio web no dudes en contactarme usando el formulario o mis redes sociales.</p>
+            <a href="mailto:hernanaguirre3012@gmail.com">hernanaguirre3012@gmail.com</a>
+        </aside>
+    </section>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="build/js/app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 </body>
 </html>

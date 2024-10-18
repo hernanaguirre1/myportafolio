@@ -23,19 +23,11 @@ body , html {
     height: 100%;    
 }
 body {
-    background-color: #0e0d0d;
-    background-image: radial-gradient(circle, rgba(173, 173, 173, 0.11) 2px, transparent 1px);
-    background-size: 4px 2px;
-    animation: moveBackground 10s linear infinite;
-    overflow: hidden;
-    overflow-y: scroll;
+    background-color: v.$blanco;
 }
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
   a {
     text-decoration: none;
+  }
+  p {
+    font-family: v.$texto;
   }

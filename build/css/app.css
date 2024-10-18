@@ -323,7 +323,7 @@ html {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Protest Strike", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 body, html {
@@ -334,581 +334,656 @@ body, html {
 }
 
 body {
-  background-color: #0e0d0d;
-  background-image: radial-gradient(circle, rgba(173, 173, 173, 0.11) 2px, transparent 1px);
-  background-size: 4px 2px;
-  animation: moveBackground 10s linear infinite;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
+  background-color: #fff;
 }
 
 a {
   text-decoration: none;
 }
 
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
 .header {
+  padding-left: 1rem;
+  width: 95%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  height: 80px;
-}
-.header .navegacion {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (min-width: 769px) {
-  .header .navegacion {
-    width: 400px;
-  }
-}
-.header .navegacion i {
-  position: relative;
-  font-size: 2.5rem;
-  font-family: "Caveat", cursive;
-  color: #fff;
-  border-radius: 50%;
-  padding: 1rem 1.1rem;
-  transition: all 0.2s ease-in-out;
-}
-.header .navegacion i:hover {
-  color: black;
-}
-
-.navegacion .bi-instagram::after {
-  content: "Instagram";
-  position: absolute;
-  bottom: -12px;
-  left: -12px;
-  font-size: 1.8rem;
-  overflow: hidden;
-  display: none;
-}
-.navegacion .bi-instagram:hover::after {
-  animation: redes 0.3s ease-in-out;
-  display: block;
-  overflow: visible;
-}
-.navegacion .bi-github::after {
-  content: "Github";
-  position: absolute;
-  bottom: -12px;
-  left: -3px;
-  font-size: 1.8rem;
-  overflow: hidden;
-  display: none;
-}
-.navegacion .bi-github:hover::after {
-  animation: redes 0.3s ease-in-out;
-  display: block;
-  overflow: visible;
-}
-.navegacion .bi-linkedin::after {
-  content: "Linkedin";
-  position: absolute;
-  bottom: -12px;
-  left: -8px;
-  font-size: 1.8rem;
-  overflow: hidden;
-  display: none;
-}
-.navegacion .bi-linkedin:hover::after {
-  animation: redes 0.3s ease-in-out;
-  display: block;
-  overflow: visible;
-}
-
-@keyframes redes {
-  0% {
-    transform: translateY(-12px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes entrada {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slide-in-elliptic-bottom-fwd {
-  0% {
-    -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
-    transform: translateY(600px) rotateX(30deg) scale(0);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) rotateX(0) scale(1);
-    transform: translateY(0) rotateX(0) scale(1);
-    -webkit-transform-origin: 50% -1400px;
-    transform-origin: 50% -1400px;
-    opacity: 1;
-  }
-}
-.contenedor {
-  width: 100%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (min-width: 1200px) {
-  .contenedor {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-
-.main {
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .main {
-    width: 80%;
-  }
-}
-
-.botones {
-  width: 100%;
-  display: flex;
-  gap: 3rem;
   position: fixed;
-  top: 60px;
   z-index: 999;
-  justify-content: space-around;
-  background-color: rgba(112, 128, 144, 0.2862745098);
-  transition: all 0.3s ease-in-out;
 }
-@media (min-width: 1200px) {
-  .botones {
-    background: transparent;
-    position: relative;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 20%;
-    margin-left: 30px;
+@media (min-width: 767px) {
+  .header {
+    align-items: start;
   }
 }
-.botones .boton {
-  background: transparent;
-  border: none;
-  font-size: 2.2rem;
-  color: #E0E0E0;
-  font-family: "Protest Strike", sans-serif;
+.header h1 {
+  font-size: 2rem;
+  color: #3D8577;
+}
+@media (min-width: 480px) {
+  .header h1 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 767px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header h1 {
+    font-size: 4rem;
+  }
+}
+.header p {
+  font-size: 1rem;
   text-transform: uppercase;
-  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.938);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  color: #A6DAA9;
 }
-@media (min-width: 769px) {
-  .botones .boton {
-    font-size: 4vw;
+@media (min-width: 480px) {
+  .header p {
+    font-size: 1.5rem;
   }
-}
-@media (min-width: 1200px) {
-  .botones .boton {
-    font-size: 1.2rem;
-  }
-}
-.botones .boton:hover {
-  transform: translateY(-2px);
-}
-.botones .active {
-  color: #708090;
 }
 
 .principal {
   width: 100%;
-  margin: 0;
-  z-index: 5;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-}
-@media (min-width: 1200px) {
-  .principal {
-    margin-top: 200px;
-  }
 }
 @media (min-width: 1200px) {
   .principal {
     flex-direction: row;
   }
 }
-.principal .informacion {
-  padding: 2rem;
-  width: 100%;
-  text-align: center;
-  border-bottom: 5px solid #cfc5b6;
-}
-@media (min-width: 1200px) {
-  .principal .informacion {
-    width: 40%;
-    border-bottom: none;
-    text-align: left;
-    border-right: 5px solid #cfc5b6;
-  }
-}
-
-.informacion h1 {
-  font-size: 12vw;
-  color: #cfc5b6;
-  text-shadow: 8px 14px 1px #000;
-}
-@media (min-width: 769px) {
-  .informacion h1 {
-    font-size: 6vw;
-  }
-}
-@media (min-width: 1200px) {
-  .informacion h1 {
-    font-size: 4vw;
-  }
-}
-.informacion h2 {
-  color: #708090;
-  text-decoration-line: underline;
-}
-.informacion p {
-  color: #E0E0E0;
-  font-family: "Caveat", cursive;
-  font-size: 1.7rem;
-  line-height: 30px;
-  letter-spacing: 2px;
-}
-.informacion a {
-  width: 200px;
-  height: 60px;
-  font-size: 2rem;
-  font-family: "Protest Strike", sans-serif;
-  color: #000;
-  padding: 0.8rem 3.5rem;
-  text-transform: uppercase;
-  background-color: #cfc5b6;
-  transition: 0.2s ease-in-out;
-  box-shadow: 3px 4px 0 #708090;
-  z-index: 10;
-}
-.informacion a:hover {
-  background-color: #e3ddd5;
-  font-size: 2.04rem;
-  box-shadow: 5px 8px 0 #708090;
-}
-
-.estudios {
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .estudios {
-    width: 58%;
-  }
-}
-.estudios .educacion {
-  width: 100%;
-  z-index: 999;
-  background-color: #708090;
-  text-align: center;
-  box-shadow: 10px 7px #cfc5b6;
-  transition: all 0.2s ease-in-out;
-}
-@media (min-width: 1200px) {
-  .estudios .educacion {
-    width: 90%;
-  }
-}
-
-.educacion h3 {
-  font-size: 2.5rem;
-  color: #cfc5b6;
-  font-family: "Protest Strike", sans-serif;
-  text-shadow: 3px 5px black;
-}
-.educacion aside {
-  font-family: "Caveat", cursive;
-  font-size: 1.6rem;
-  color: #E0E0E0;
-}
-
-.contacto-section {
-  width: 100%;
-  margin: 0;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
-  padding: 2rem;
-  margin-bottom: 30px;
-}
-@media (min-width: 1200px) {
-  .contacto-section {
-    margin-top: 200px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-.contacto-section aside {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.contacto-section .item2 {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-}
-@media (min-width: 1200px) {
-  .contacto-section .item2 {
-    width: 35%;
-  }
-}
-.contacto-section .item2 p {
-  color: #E0E0E0;
-  font-family: "Caveat", cursive;
-  font-size: 2.5rem;
-  line-height: 50px;
-  text-align: center;
-}
-
-.red {
-  width: 70px;
-  height: 100px;
-  background-color: #708090;
-  overflow: hidden;
-  box-shadow: 3px 5px 1px #cfc5b6;
-  z-index: 10;
-}
-.red aside {
-  width: 100%;
-  height: 100%;
-}
-.red aside a {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-content: center;
-}
-.red aside i {
-  color: #fff;
-  font-size: 3rem;
-}
-.red .mods, .red .sin-mod {
-  transition: all 0.3s ease-in-out;
-}
-.red .mod-instagram {
-  background: linear-gradient(90deg, rgb(255, 32, 69) 14%, rgb(254, 4, 131) 36%, rgb(254, 7, 125) 61%, rgb(254, 58, 20) 100%);
-}
-.red .mod-github {
-  background-color: black;
-}
-.red .mod-linkedin {
-  background: linear-gradient(90deg, rgb(32, 104, 255) 34%, rgb(64, 88, 153) 75%);
-}
-
-.red:hover .sin-mod {
-  transform: translateY(-100%);
-}
-.red:hover .mods {
-  transform: translateY(-100%);
-}
-
-.contacto-section form {
+.principal .info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 65%;
+}
+@media (min-width: 1200px) {
+  .principal .info {
+    width: 70%;
+    height: 100%;
+  }
+}
+.principal .otros {
+  width: 100%;
+  height: 35%;
+  background-color: #0F0F0E;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .principal .otros {
+    width: 30%;
+    height: 100%;
+  }
+}
+
+.info p {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 2.2;
+}
+@media (min-width: 480px) {
+  .info p {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 767px) {
+  .info p {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .info p {
+    width: 60%;
+    font-size: 2rem;
+  }
+}
+
+.principal__boton {
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  z-index: 20;
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .contacto-section form {
-    width: 50%;
-  }
-}
-.contacto-section form input, .contacto-section form textarea, .contacto-section form label {
-  width: 100%;
-}
-
-form label {
-  font-family: "Caveat", cursive;
-  font-size: 2.2rem;
-  color: #E0E0E0;
-}
-form input, form textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #cfc5b6;
-  transition: all 0.3s ease-in-out;
-  color: #708090;
-  font-size: 4rem;
-  text-align: center;
-  resize: none;
-}
-form input:focus, form textarea:focus {
-  outline: none;
-  transform: scale(1.05);
-}
-form button {
   width: 200px;
-  z-index: 10;
-  color: #fff;
+  position: relative;
   height: 50px;
   font-size: 3rem;
-  font-family: "Protest Strike", sans-serif;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.219);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  border: 2px solid #708090;
-  background: transparent;
-  transition: 0.3s ease-in-out;
+  color: #78B897;
+  border: 2px solid #78B897;
   overflow: hidden;
-  position: relative;
+  transition: all 0.4s ease-in-out;
+  font-weight: 900;
 }
-form button::after {
+@media (min-width: 767px) {
+  .principal__boton {
+    font-size: 5rem;
+    width: 270px;
+    height: 80px;
+  }
+}
+.principal__boton::after {
   content: "";
   position: absolute;
-  left: -30px;
   top: 0;
+  left: 0;
   width: 0;
-  height: 100%;
-  background-color: #708090;
-  transform: skew(45deg);
-  transition: 0.5s ease-in-out;
+  height: 200%;
+  background-color: #78B897;
   z-index: 2;
+  transition: all 0.5s ease-in-out;
+  transform: skew(50deg);
 }
-form button:hover::after {
+.principal__boton span {
+  position: relative;
+  z-index: 3;
+}
+.principal__boton:hover {
+  color: #fff;
+}
+.principal__boton:hover::after {
   width: 200%;
 }
-form button span {
-  position: relative;
-  z-index: 11;
+
+.otros h2 {
+  font-size: 3rem;
+  color: #78B897;
+  text-align: center;
+}
+@media (min-width: 767px) {
+  .otros h2 {
+    font-size: 5rem;
+  }
 }
 
-.proyectos-section {
+.promocion {
   width: 100%;
-  display: none;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-.proyectos-section .proyectos {
-  width: 98%;
-  background-color: rgba(112, 128, 144, 0.1568627451);
-  bottom: 0;
-  position: fixed;
-  left: 5px;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.promocion h2 {
+  color: #78B897;
+  font-size: 10vw;
+  text-align: center;
+}
+@media (min-width: 767px) {
+  .promocion h2 {
+    font-size: 7vw;
+  }
+}
+.promocion p {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 30px;
+  margin-top: -80px;
+}
+@media (min-width: 767px) {
+  .promocion p {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+.promocion .promocion__boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 3rem;
+  padding: 20px 50px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #78B897;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.356);
+}
+
+.promocion__boton:hover {
+  color: #78B897;
+  background-color: #fff;
+  box-shadow: none;
+}
+.promocion__boton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  background-color: #78B897;
+  transition: all 0.4s ease-in-out;
+}
+.promocion__boton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #78B897;
+  transition: all 0.4s ease-in-out;
+}
+.promocion__boton:hover::after, .promocion__boton:hover::before {
+  width: 100%;
+}
+
+.proyectos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 150%;
+}
+@media (min-width: 1200px) {
+  .proyectos {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+  }
+}
+.proyectos .izquierda {
+  width: 100%;
+  height: 40%;
+  background-color: #0F0F0E;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .proyectos .izquierda {
+    width: 60%;
+    height: 100%;
+  }
+}
+.proyectos .derecha {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
   overflow: hidden;
   overflow-x: scroll;
-  align-items: end;
-  gap: 3rem;
-  padding: 2rem;
-}
-.proyectos-section .proyectos::-webkit-scrollbar {
-  width: auto;
-  height: 5px;
-  background-color: rgb(29, 29, 29);
+  padding: 10px 15px;
 }
 @media (min-width: 1200px) {
-  .proyectos-section .proyectos {
-    width: 50%;
-    height: 300px;
+  .proyectos .derecha {
+    width: 35%;
+    height: 99%;
     flex-direction: column;
-    bottom: 30px;
-    left: auto;
-    right: 20px;
-    background: transparent;
     overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  .proyectos-section .proyectos::-webkit-scrollbar {
-    width: 5px;
-    height: auto;
+    padding: 30px;
   }
 }
-.proyectos-section .proyectos .proyecto {
-  background: transparent;
-  border: none;
-  font-size: 3vw;
-  color: #cfc5b6;
-  font-family: "Protest Strike", sans-serif;
-  text-transform: uppercase;
-  text-shadow: 5px 7px 1px black;
-}
-.proyectos-section .proyectos .proyecto:hover {
-  font-style: italic;
-  cursor: pointer;
+.proyectos .derecha::-webkit-scrollbar {
+  width: 0;
 }
 
-.festival {
-  width: 100%;
-  margin: 100px 0;
-  display: none;
-  flex-direction: column;
-  align-items: center;
+.izquierda h2 {
+  font-size: 13vw;
+  color: #3D8577;
 }
-@media (min-width: 1200px) {
-  .festival {
-    width: 50%;
+@media (min-width: 767px) {
+  .izquierda h2 {
+    font-size: 6.5vw;
   }
 }
-.festival h2 {
-  font-size: 4vw;
-  color: #708090;
-  text-shadow: 3px 6px black;
+.izquierda .proyectos__boton {
+  color: #A6DAA9;
+  border: 2px solid #A6DAA9;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  width: 220px;
+  height: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.festival img {
+@media (min-width: 767px) {
+  .izquierda .proyectos__boton {
+    width: 300px;
+    height: 90px;
+    font-size: 4rem;
+  }
+}
+.izquierda .proyectos__boton i {
+  display: none;
+  margin-left: 20px;
+}
+.izquierda .proyectos__boton:hover {
+  justify-content: space-around;
+}
+.izquierda .proyectos__boton:hover i {
+  display: block;
+  animation: in 0.3s ease-in-out;
+}
+
+@keyframes in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.derecha .proyecto {
+  min-width: 270px;
+  min-height: 100%;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.048);
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 767px) {
+  .derecha .proyecto {
+    min-width: 600px;
+  }
+}
+@media (min-width: 1200px) {
+  .derecha .proyecto {
+    min-width: 80%;
+    min-height: 500px;
+    margin-bottom: 50px;
+  }
+}
+.derecha .proyecto:hover {
+  transform: scale(1.05);
+}
+.derecha .proyecto img {
+  border-radius: 30px 30px 0 0;
   width: 100%;
   height: auto;
 }
-.festival p {
-  text-align: center;
-  font-family: "Caveat", cursive;
-  font-size: 2.5rem;
-  color: #E0E0E0;
-  line-height: 50px;
-  letter-spacing: 3px;
+.derecha .proyecto h2 {
+  color: #78B897;
+  font-size: 3rem;
 }
-.festival .responsive {
+.derecha .proyecto p {
+  width: 95%;
+  font-size: 1.8rem;
+}
+.derecha .proyecto .enlace {
+  padding: 15px;
+  font-size: 2.2rem;
+  border-radius: 0 0 30px 30px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  background-color: #A6DAA9;
+}
+.derecha .proyecto .enlace:hover {
+  background-color: #b8e1ba;
+}
+
+.contacto {
+  width: 100%;
+  height: 150%;
+  display: grid;
+  grid-template-rows: 35% 65%;
+}
+@media (min-width: 480px) {
+  .contacto {
+    grid-template-rows: 45% 55%;
+  }
+}
+@media (min-width: 1200px) {
+  .contacto {
+    height: 100%;
+    grid-template-rows: 100%;
+    grid-template-columns: 60% 40%;
+  }
+}
+.contacto .formulario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  grid-row: 2;
+}
+@media (min-width: 1200px) {
+  .contacto .formulario {
+    grid-row: 1;
+  }
+}
+.contacto .mail {
+  width: 100%;
+  height: 100%;
+  background-color: #0F0F0E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.formulario form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+@media (min-width: 1200px) {
+  .formulario form {
+    width: 55%;
+    font-size: 3rem;
+  }
+}
+.formulario form label, .formulario form input, .formulario form textarea {
+  width: 100%;
+}
+.formulario form input, .formulario form textarea {
+  border: none;
+  border-bottom: 2px solid #78B897;
+  resize: none;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+.formulario form input:focus, .formulario form textarea:focus {
+  transform: scale(1.1);
+  outline: none;
+  border-bottom: 2px solid #78B897;
+}
+.formulario form button {
+  font-family: "Bebas Neue", sans-serif;
+  color: #78B897;
+  font-size: 2.5rem;
+  width: 70%;
+  padding: 10px 0;
+  background: transparent;
+  border: 1px solid #78B897;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 767px) {
+  .formulario form button {
+    font-size: 4rem;
+    padding: 15px 60px;
+  }
+}
+.formulario form button:hover {
+  box-shadow: 3px 5px 2px #78B897;
+}
+
+.mail p {
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 5px;
+}
+@media (min-width: 767px) {
+  .mail p {
+    width: 70%;
+    font-size: 2.3rem;
+  }
+}
+.mail a {
+  color: #A6DAA9;
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 10px 30px;
+  border: 2px solid #A6DAA9;
+  transition: 0.5s ease-in-out;
+}
+.mail a:hover {
+  color: #fff;
+  box-shadow: inset 0 200px 0 #A6DAA9;
+}
+@media (min-width: 767px) {
+  .mail a {
+    padding: 15px 30px;
+    font-size: 3rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+}
+.footer .redes {
+  width: 100%;
   display: flex;
   justify-content: space-around;
+}
+@media (min-width: 767px) {
+  .footer .redes {
+    width: 30%;
+  }
+}
+.footer .redes a {
+  padding: 15px 12px;
+  border-radius: 5px 5px 50px 50px;
+  font-size: 2rem;
+  background-color: #373733;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.39);
+}
+.footer .redes a:hover {
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.575);
+  background-color: #0F0F0E;
+  transform: translateY(-10px);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 20px;
+  gap: 10px;
+}
+.nav a {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #A6DAA9;
+  transition: all 0.3s ease-in-out;
+}
+.nav div {
+  width: 7px;
+  height: 7px;
+  border: 2px solid #A6DAA9;
+  border-radius: 50%;
+}
+.nav .active {
+  border-radius: 0 0 0 0;
+  transform: rotateZ(45deg);
+}
+
+.masInfo {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  gap: 2rem;
+  position: relative;
+  text-align: center;
 }
-.festival .responsive img {
-  width: 40%;
-  height: auto;
-  transform: rotate(10deg);
+@media (min-width: 1200px) {
+  .masInfo {
+    padding-top: 300px;
+  }
 }
-.festival .responsive img:last-of-type {
-  transform: rotate(-10deg);
+.masInfo img {
+  position: relative;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.041);
+}
+@media (min-width: 1200px) {
+  .masInfo img {
+    position: absolute;
+    top: 160px;
+    left: 250px;
+  }
+}
+.masInfo h2 {
+  font-size: 2rem;
+  color: #78B897;
+  z-index: 10;
+}
+@media (min-width: 767px) {
+  .masInfo h2 {
+    font-size: 4rem;
+  }
+}
+.masInfo p {
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+@media (min-width: 767px) {
+  .masInfo p {
+    width: 50%;
+    font-size: 2rem;
+    line-height: 50px;
+  }
+}
+.masInfo .volver {
+  position: fixed;
+  z-index: 30;
+  right: 30px;
+  top: 90px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #78B897;
+  font-size: 2.5rem;
+}
+.masInfo .volver:hover {
+  font-style: italic;
 }/*# sourceMappingURL=app.css.map */

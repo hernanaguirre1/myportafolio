@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 20px;
+    gap: 10px;
+    a {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid v.$verdeClaro;
+        transition: all .3s ease-in-out;
+    }
+    div{
+        width: 7px;
+        height: 7px;
+        border: 2px solid v.$verdeClaro;
+        border-radius: 50%;
+    }
+    .active {
+        border-radius: 0 0 0 0  ;
+        transform: rotateZ(45deg);
+    }
+}

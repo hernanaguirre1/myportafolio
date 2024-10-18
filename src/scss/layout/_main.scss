@@ -1,8 +1,0 @@
-@use 'base/mixins' as m;
-
-.main {
-    width: 100%;
-    @include m.desktop {
-        width: 80%;
-    }
-}

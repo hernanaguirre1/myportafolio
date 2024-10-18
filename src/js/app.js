@@ -1,96 +1,52 @@
-particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#cfc5b6"
-      },
-      "shape": {
-        "type": "circle"
-      },
-      "opacity": {
-        "value": .1,
-        "random": true
-      },
-      "size": {
-        "value": 10,
-        "random": true
-      },
-      "move": {
-        "enable": true,
-        "speed": 1,
-        "direction": "bottom",
-        "straight": false
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        }
-      }
-    }
-  });
+document.addEventListener('DOMContentLoaded', function(){
+    resaltarEnlace()
+    scrollNav()
+    contacto()
+})
 
-  // main 
+function resaltarEnlace() {
+    document.addEventListener('scroll', ()=> {
+        const sections = document.querySelectorAll('section')
+        const navLinks = document.querySelectorAll('.nav a')
+        let actual = ''
+        sections.forEach( section => {
+            const sectionTop = section.offsetTop
+            const sectionHeight = section.clientHeight
+            if(window.scrollY >= (sectionTop - sectionHeight / 4)) {
+                actual = section.id
+            }
+        })
 
-  const botones = document.querySelectorAll('.boton')
-  const principal = document.querySelector('#principal')
-  const contacto = document.querySelector('#contacto')
-  const proyectos = document.querySelector('#proyectos')
-  const proyectosBtn = document.querySelectorAll('.proyecto')
-  const festival = document.querySelector('.festival')
-  const navegacion = document.querySelector('.botones')
-
-  botones[0].classList.add('active')
-
-  botones.forEach(boton => {
-    boton.addEventListener('click', ()=> {
-      botones.forEach(btn => btn.classList.remove('active'));
-      boton.classList.add('active')
-
-      if(boton.classList.contains('contacto')) {
-          principal.style.display = 'none'
-          proyectos.style.display = 'none'
-          contacto.style.animation = 'entrada .2s ease-in'
-        contacto.style.display = 'flex'
-      } else if(boton.classList.contains('inicio')) {
-         contacto.style.display = 'none'
-         proyectos.style.display = 'none'
-          principal.style.display = 'flex'
-          principal.style.animation = 'entrada .2s ease-in'
-      } else if (boton.classList.contains('proyectos')) {
-          contacto.style.display = 'none'
-          principal.style.display = 'none'
-          proyectos.style.display = 'flex'
-          proyectos.style.animation = 'entrada .2s ease-in'
-      }
-
-
+        navLinks.forEach(link => {
+            link.classList.remove('active')
+            if(link.getAttribute('href') === '#' + actual ){
+                link.classList.add('active')
+            }
+        })
     })
-  })
+}
 
-  proyectosBtn.forEach (btn => {
-    btn.addEventListener('click', ()=> {
-      if (btn.classList.contains('festival-proyecto')) {
-        festival.style.display = 'flex'
-        festival.style.animation = 'slide-in-elliptic-bottom-fwd 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
-      }
+
+function scrollNav() {
+    const navLinks = document.querySelectorAll('.nav a')
+
+    navLinks.forEach(link => {
+        link.addEventListener('click' , e => {
+            e.preventDefault()
+            const sectionScroll = e.target.getAttribute('href')
+            const section = document.querySelector(sectionScroll)
+            section.scrollIntoView({behavior : 'smooth'})
+        })
     })
-  })
+}
 
-  window.addEventListener('scroll', ()=> {
-    if (window.scrollY > 80) {
-      navegacion.style.top = '0'
-    }
-    else {
-      navegacion.style.top = '75px'
-    }
-  })
+function contacto() {
+    const boton = document.querySelector('.promocion__boton')
+
+    boton.addEventListener('click', e => {
+        e.preventDefault()
+        const sectionScroll = e.target.getAttribute('href')
+        const section = document.querySelector(sectionScroll)
+        section.scrollIntoView({behavior : 'smooth'})
+    })
+}
