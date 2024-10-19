@@ -327,14 +327,15 @@ h1, h2, h3, h4 {
 }
 
 body, html {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
 }
 
 body {
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -346,16 +347,16 @@ p {
 }
 
 .header {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  z-index: 999;
 }
 @media (min-width: 767px) {
   .header {
+    z-index: 999;
+    position: fixed;
     flex-direction: row;
   }
 }
@@ -389,6 +390,10 @@ p {
   }
 }
 
+.relative {
+  position: relative;
+}
+
 .principal {
   width: 100%;
   height: 100%;
@@ -415,7 +420,7 @@ p {
   }
 }
 .principal .otros {
-  width: 100%;
+  max-width: 100%;
   height: 35%;
   background-color: #0F0F0E;
   display: flex;
@@ -431,10 +436,13 @@ p {
 }
 
 .info {
-  width: 100%;
+  max-width: 100%;
   font-size: 1.2rem;
   text-align: center;
   line-height: 2.2;
+}
+.info p {
+  width: 80%;
 }
 @media (min-width: 480px) {
   .info p {
@@ -744,6 +752,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
   position: relative;
   grid-row: 2;
 }
@@ -846,13 +856,15 @@ p {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 100px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
 }
 .footer .redes {
   width: 100%;
