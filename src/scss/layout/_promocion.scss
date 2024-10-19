@@ -10,18 +10,22 @@
     justify-content: space-evenly;
     align-items: center;
     h2 {
-        color: v.$verdeMedio;
-        font-size: 10vw;
-        text-align:center;
+        & {
+            color: v.$verdeMedio;
+            font-size: 10vw;
+            text-align:center;
+        }
         @include m.tablet {
             font-size: 7vw;
         }
     }
     p {
-        text-align: center;
-        font-size: 2rem;
-        line-height: 30px;
-        margin-top: -80px;
+        & {
+            text-align: center;
+            font-size: 2rem;
+            line-height: 30px;
+            margin-top: -80px;
+        }
         @include m.tablet {
             width: 50%;
             margin-top: 0;

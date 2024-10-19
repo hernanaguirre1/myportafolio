@@ -3,37 +3,41 @@
 
 
 .header {
-    padding-left: 1rem;
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    position: fixed;
-    z-index: 999;
+    & {
+        padding-left: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      
+    }
     @include m.tablet {
-            align-items: start;
+        flex-direction: row;
     }
      h1 {
-
-        font-size: 2rem;
-        color: v.$verdeOscuro;
-        @include m.telefono {
-            font-size: 2.8rem;
-        }
-        @include m.tablet {
-            font-size: 3rem;
-        }
-        @include m.desktop {
-            font-size: 4rem;
-        }
+         & {
+             font-size: 2rem;
+             color: v.$verdeOscuro;
+         }
+         @include m.telefono {
+             font-size: 2.8rem;
+         }
+         @include m.tablet {
+             font-size: 3rem;
+         }
+         @include m.desktop {
+             font-size: 4rem;
+         }
      }
      p {
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: v.$verdeClaro;
-        @include m.telefono {
-            font-size: 1.5rem;
-        }
+         & {
+             font-size: 1rem;
+             text-transform: uppercase;
+             color: v.$verdeClaro;
+         }
+         @include m.telefono {
+             font-size: 1.5rem;
+         }
      }
 }

@@ -2,23 +2,27 @@
 @use 'base/mixins' as m;
 
 .masInfo {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    gap: 2rem;
+    & {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        gap: 2rem;
+        position: relative;
+        text-align: center;
+    }
     @include m.desktop {
         padding-top: 300px;
     }
-    position: relative;
-    text-align: center;
     img {
-        position: relative;
-        width: 200px;
-        border-radius: 10px;
-        box-shadow: 0 0 70px rgba(0, 0, 0, 0.041);
+        & {
+            position: relative;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 70px rgba(0, 0, 0, 0.041);
+        }
         @include m.desktop {
             position: absolute;
             top: 160px;
@@ -27,21 +31,25 @@
     }
 
     h2 {
-        font-size: 2rem;
+        & {
+            font-size: 2rem;
+            color: v.$verdeMedio;
+            z-index: 10;
+        }
         @include m.tablet {
             font-size: 4rem
         }
-        color: v.$verdeMedio;
-        z-index: 10;
     }
     p {
+        & {
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
         @include m.tablet {
             width: 50%;
             font-size: 2rem;
             line-height: 50px;
         }
-        font-size: 1.5rem;
-        line-height: 40px;
     }
 
     .volver {
