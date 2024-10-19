@@ -346,12 +346,13 @@ p {
 }
 
 .header {
-  padding-left: 1rem;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  z-index: 999;
 }
 @media (min-width: 767px) {
   .header {
@@ -526,7 +527,7 @@ p {
 }
 @media (min-width: 767px) {
   .promocion h2 {
-    font-size: 7vw;
+    font-size: 5vw;
   }
 }
 .promocion p {
@@ -614,28 +615,25 @@ p {
   }
 }
 .proyectos .derecha {
-  box-sizing: border-box;
-  margin: 0;
-  max-width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 30px;
   overflow: hidden;
   overflow-x: scroll;
-  flex-wrap: nowrap;
-}
-@media (min-width: 1200px) {
-  .proyectos .derecha {
-    width: 35%;
-    height: 99%;
-    flex-direction: column;
-    overflow-y: scroll;
-    padding: 30px;
-  }
+  gap: 20px;
+  padding-left: 35px;
 }
 .proyectos .derecha::-webkit-scrollbar {
   width: 0;
+}
+@media (min-width: 1200px) {
+  .proyectos .derecha {
+    overflow-x: none;
+    overflow-y: scroll;
+    flex-direction: column;
+    width: 35%;
+  }
 }
 
 .izquierda h2 {
@@ -687,48 +685,33 @@ p {
   }
 }
 .derecha .proyecto {
-  min-width: 300px;
-  height: 100%;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.048);
-  border-radius: 30px;
+  height: auto;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease-in-out;
-}
-@media (min-width: 767px) {
-  .derecha .proyecto {
-    width: 500px;
-  }
+  padding-bottom: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.082);
+  min-width: 350px;
 }
 @media (min-width: 1200px) {
   .derecha .proyecto {
-    min-width: 80%;
-    min-height: 500px;
-    margin-bottom: 50px;
+    width: 80%;
   }
 }
-.derecha .proyecto:hover {
-  transform: scale(1.05);
-}
 .derecha .proyecto img {
-  border-radius: 30px 30px 0 0;
   width: 100%;
   height: auto;
+  border-radius: 30px 30px 0 0;
 }
 .derecha .proyecto h2 {
-  color: #78B897;
+  color: #3D8577;
   font-size: 3rem;
 }
 .derecha .proyecto p {
-  width: 90%;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 .derecha .proyecto .enlace {
-  padding: 15px;
-  font-size: 2.2rem;
-  border-radius: 0 0 30px 30px;
+  padding: 5px 50px;
+  font-size: 2rem;
   font-family: "Bebas Neue", sans-serif;
   color: #fff;
   background-color: #A6DAA9;
