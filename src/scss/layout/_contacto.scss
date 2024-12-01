@@ -120,15 +120,13 @@
             font-family: v.$titulo;
             padding: 10px 30px;
             border: 2px solid v.$verdeClaro;
-            transition: .5s ease-in-out;
         }
         @include m.tablet {
             padding: 15px 30px;
             font-size: 3rem;
         }
         &:hover {
-            color: v.$blanco;
-            box-shadow: inset 0 200px 0 v.$verdeClaro;
+            box-shadow: 3px 5px 2px v.$verdeMedio ;
         }
     }
 }
